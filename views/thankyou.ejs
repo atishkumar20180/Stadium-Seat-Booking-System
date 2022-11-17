@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Thankyou</title>
+</head>
+<body>
+    <div style="width:50rem; margin:auto; margin-top:5vh; border:1px solid grey; text-align:center;">
+        <h3 style="color:green; padding-top:2vh;">Thank You for booking Ticket!</h3>
+        <h3>Below is Your Ticket Details</h3>
+        <h3 style="display:inline;">Ticket id</h3>
+        <p style="margin-left:1vw; display:inline; font-size:3rem;" id="ticketid"></p><br><br>
+        <% for(i in ticketdet){ %>
+        <h4 style="display:inline;"><b><%= i %> :</b></h4>
+        <p style="margin-left:1vw; display:inline;"><%= ticketdet[i] %></p><br><br>
+        <% } %>
+        <button class="btn btn-outline-primary" style="margin-bottom: 2vh;" onclick="window.history.back(); return false;">Go Back</button>
+        <button class="btn btn-outline-primary" style="margin-bottom: 2vh;" onclick="myfun()">Print</button>
+    </div>
+    <script>
+        function myfun(){
+
+            document.getElementsByTagName('button').display="none";
+            window.print();
+            document.getElementsByTagName('button').display="block";
+            return false;
+        }
+        function getRndInteger(m, ma){
+            return Math.floor(Math.random()*(ma-m))+m;
+        }
+        ran=getRndInteger(100000, 1000000);
+        document.getElementById('ticketid').innerHTML=ran;
+    </script>
+</body>
+</html>

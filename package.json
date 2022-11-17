@@ -1,12 +1,28 @@
 {
-  
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "Stadium Seat Booking Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atishkumar20180/Stadium-Seat-Booking-System.git"
+  },
+  "author": "\"Atish Kumar\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atishkumar20180/Stadium-Seat-Booking-System/issues"
+  },
+  "homepage": "https://github.com/atishkumar20180/Stadium-Seat-Booking-System#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mysql": "^2.18.1",
-    "path": "^0.12.7",
-    "pug": "^3.0.2"
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1"
   }
 }

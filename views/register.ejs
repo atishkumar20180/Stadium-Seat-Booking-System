@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Register</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/cs.css">
-        <link rel="icon" type="image/x-icon" href="img/icon.png">
-        <link rel="stylesheet" href="css/homepage.css">
-      </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/cs.css">
+    <link rel="icon" type="image/x-icon" href="/public/img/icon.png">
+    <link rel="stylesheet" href="/public/css/homepage.css">
+  </head>
 <body style="margin-top:0px;" class="homepageanimation" id="homepagebody">
     
-  <%- include('../header'); -%>
+  <%- include('common/header'); -%>
 
       
 
@@ -25,7 +25,7 @@
 
                     <div class="card-body">
 
-                        <form  id="form"  action="/login" method="post">
+                        <form  id="form"  action="/register" method="post">
 
 
                             <div style="width: 32vw; margin-bottom:1vh">
@@ -55,16 +55,26 @@
                               <p id="emailres"></p>
                               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                             </div>
-                            <div class="bg-danger" id="emailalreadypresent"role="alert" style="border-radius: 3px;text-align:center;">
-                            </div>
+                            
+                              
+                                <div class="bg-danger" id="emailalreadypresent" role="alert" style="border-radius: 3px;text-align:center">
+                                  <%= emailvalidation %>
+                                </div>
+                                
+                            
                            
                             <div class="mb-3">
                               <label for="userid" class="form-label">Enter User Id</label>
                               <input type="userid" class="form-control" id="userid" name="userid" aria-describedby="emailHelp" autocomplete="on" required>
                               <div id="useridinstruction" class="form-text">User Id Should Contain Alphabet Characters and Some Special Charecters</div>
                             </div>
-                            <div class="bg-danger" id="useridalreadypresent"role="alert" style="border-radius: 3px;text-align:center">
-                            </div>
+                           
+                             
+                              <div class="bg-danger" id="useridalreadypresent"role="alert" style="border-radius: 3px;text-align:center">
+                                <%= useridvalidation %>
+                              </div>
+                              
+                            
 
                             <div class="mb-3">
                               <label for="password"   class="form-label">Enter Password</label>
@@ -79,10 +89,15 @@
                             </div>
                             <div class="bg-success" id="success"role="alert" style="border-radius: 3px;text-align:center">
                             </div>
+                                <div class="bg-success" id="confirmation" role="alert" style="border-radius: 3px;text-align:center">
+                                  <%= registrationconfirmation %>
+                                </div>
+                                
+                            </div>
                             
                             
                             
-                            <input type="submit" id="registerbutton" class="btn btn-primary"style="position:relative; top:0.01vw; left:5.5vw; width:15vw;" value="Register">
+                            <input type="submit" id="registerbutton" class="btn btn-primary"style="position:relative; top:0.01vw; left:5.5vw; width:15vw; margin-bottom:3vh;" value="Register">
 
                           </form>
 
@@ -96,30 +111,9 @@
 
      </div> <!-- for register ************** -->
 
-    <div class="foot" style="position:relative; bottom:0vw; width:100%; margin-top:23vh;">
-      <footer class="footer">
-       <div class="text-center mt-1 pt-4">About Us</div>
-       <div class="row footerlogo" style="width:12vw;">
-         <div class="col-4">
-           <a href="#">
-        <img src="img/FacebookLogo1.png" alt="Facebook" class="footerlogowidth" style="margin-top: 1px;">
-           </a>
-         </div>
-         <div class="col-4">
-           <a href="#">
-        <img src="img/instagramLogo.png" alt="Instagram" class="footerlogowidth" style="width: 2.1vw; height:2.1vw; margin-top:7px;">
-            </a>
-         </div>
-         <div class="col-4">
-           <a href="#">
-        <img src="img/TwitterLogo.png" alt="Twitter" class="footerlogowidth" style="margin-top: 5px;">
-           </a>
-       </div>
-     
-      </div>  <!--  class row -->
-      </footer>
-     </div>
-      <script src="js/register.js"></script>
+     <%- include('common/footer')%>
+
+      <script src="/public/js/register.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>

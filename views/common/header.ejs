@@ -1,7 +1,7 @@
 <header style="position: sticky; top:0px; z-index:1;">
     <nav class="navbar navbar-expand-lg" style="background-color:rgba(57, 57, 227, 0.8)">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img src="img/icon.png" alt="logo" class="rounded img-fluid Logo-width"></a>
+        <a class="navbar-brand" href="/"><img src="/public/img/icon.png" alt="logo" class="rounded img-fluid Logo-width"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,26 +18,25 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white  mx-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" text-white>
-                <b> Sign In</b>
+                <b> <%= dropdown%></b>
               </a>
               <ul class="dropdown-menu loginandregisterbutton">
-                <li><h5 class="dropdown-header text-info text-break loginandregisterbutton" style="font-size:0.9vw !important;">Already Have an Account</h5></li>
-                <li><a href="/login" class="btn btn-outline-primary loginandregisterbutton" style="width:100%; font-size:0.9vw !important;">
-                  Login
+                <li><h5 class="dropdown-header text-info text-break loginandregisterbutton" style="font-size:0.9vw !important;"><%= firstdiv %></h5></li>
+                <li><a href=<%= firsthref %> class="btn btn-outline-primary loginandregisterbutton" style="width:100%; font-size:0.9vw !important;">
+                  <%= firstitem %>
                 </a></li>  <!--********************login modal************************ -->
-                <li><h5 class="dropdown-header text-danger " style="font-size: 0.9vw !important;">Don't Have Account</h5></li>
-                <li><a href="/register" class="btn btn-outline-primary loginandregisterbutton" style="width:100%; font-size:0.9vw !important;">
-                  Register
+                <li><h5 class="dropdown-header text-danger " style="font-size: 0.9vw !important;"><%= seconddiv%></h5></li>
+                <li><a href=<%= secondhref%> class="btn btn-outline-primary loginandregisterbutton" style="width:100%; font-size:0.9vw !important;">
+                  <%= seconditem %>
                 </a></li>  <!--********************Register modal************************ -->
               </ul>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2 search-width" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2 search-width" type="search" id="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success text-white" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
   </header>
-  <script  type="module" src="../changeheader.js"></script>

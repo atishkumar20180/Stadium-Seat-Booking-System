@@ -3,7 +3,7 @@
     min-width: 30vw;
 }  
 .homepag{
-    height:40.6rem;
+    height:40.6vh;
     width:100%;
    background-image: url('../img/Bodyimage1.jpg');
    background-size: 100% 100%;
@@ -11,8 +11,8 @@
    background-attachment: fixed;
 }  
 .Logo-width{
-    max-width: 2.5rem;
-    max-height: 2.5rem;
+    max-width: 3vw;
+    max-height: 5vh;
 }
 .card-image-height{
     height: 47vh;
@@ -22,67 +22,124 @@
 }
 footer{
     position: relative !important;
-    bottom:1rem;
-    width:15rem !important;
+    bottom:0vh;
+    width:15vw !important;
     margin:auto;
     height:auto;
 }
 .foot{
-    border: 1px solid green;
-    height:8.4rem;
+    position: relative;
+    top:15vh;
+    left:0vw;
+    width:100%;
+    height:auto;
      background-color:rgba(57, 57, 227, 0.8);
 }
 .contactfoot{
     border: 1px solid green;
-    height:8.4rem;
+    height:10vh;
      background-color:rgba(57, 57, 227, 0.8);
      position:absolute;
-     bottom:0.7rem;
+     bottom:0.7vh;
      width:100%;
 }
 .footerlogo{
     margin: auto;
-    margin-top: 0.5rem;
-    width:20rem;
+    margin-top: 0.5vh;
+    width:20vw;
+    height: auto;
 }
 .footerlogowidth{
-    max-width: 2.5rem;
-    max-height: 2.5rem;
+    max-width: 3vw;
+    max-height: 4vh;
 }
-@media screen and (max-width:768px){
-    .forresponsivesidebar{
-        height:250px !important;
-    }
-}
-@media screen and (min-width:768px) and (max-width:1200px){
-     .minandmaxhieght{
-        height:74.4rem !important;
+@media screen and (min-width:1200px){
+    .leftcontent{
+        width:80vw !important;
+        position: absolute;
+        left:17vw;
+        top:20vh;
+        height:100vh;
     }
 }
 @media screen and (min-width:1200px){
-    .forresponsivesidebar{
-        height:36.5rem !important;
+    .sidebar{
+        width:15vw !important;
+        height:100vh;
     }
 }
-@media screen and (min-width:1245px){
-    .forresponsivesidebar{
-        height:38rem !important;
+
+@media screen and (max-width:1199px){
+    .sidebar{
+        width:100% !important;
+        height:30vh;
+        margin-bottom: 2vh;;
     }
 }
-@media screen and (min-width:1387px){
-    .forresponsivesidebar{
-        height: 36.5rem !important;
-    }
-}
+
+
+
 @media screen and (max-width:219px){
    .loginandregisterbutton{
-       width:5rem !important;
+       width:5vw !important;
+   }
+}
+
+@media screen and (max-width:925px){
+   .res{
+       width:100% !important;
+       margin-left:2vw;
    }
 }
 
 /********************************************* for home page ********************************/
 @media screen and (min-width:768){
     .newmedia{
-        height:40.5rem;
+        height:40.5vh;
     }
 }
+
+
+
+/************** profile *****************/
+.sidebar1 {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(20, 19, 19);
+    position: fixed;
+    height: 90vh;
+    overflow: auto;
+  }
+  
+  .sidebar1 a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    color:white;
+  }
+   
+  
+  .facilities {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 90vh;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar1 {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar1 a {float: left;}
+    .facilities {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar1 a {
+      text-align: center;
+      float: none;
+    }
+  }
